@@ -1,0 +1,234 @@
+/**
+ * React Starter Kit (https://www.reactstarterkit.com/)
+ *
+ * Copyright © 2014-present Kriasoft, LLC. All rights reserved.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE.txt file in the root directory of this source tree.
+ */
+
+@import '../variables.css';
+
+:root {
+  --brand-color: #08080F;
+}
+
+.root {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  font-family: 'Montserrat', sans-serif;
+  color: #FFFFFF;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  z-index: 99;
+}
+
+.isDefault {
+  background-image: linear-gradient(0deg, rgba(0,0,0,0.00) 0%, rgba(0,0,0,0.04) 14%, rgba(0,0,0,0.10) 26%, rgba(0,0,0,0.16) 36%, rgba(0,0,0,0.24) 46%, rgba(0,0,0,0.33) 54%, rgba(0,0,0,0.42) 62%, rgba(0,0,0,0.51) 69%, rgba(0,0,0,0.59) 74%, rgba(0,0,0,0.67) 80%, rgba(0,0,0,0.75) 84%, rgba(0,0,0,0.81) 89%, rgba(0,0,0,0.86) 92%, rgba(0,0,0,0.89) 96%, rgba(0,0,0,0.90) 100%);
+}
+
+.isActive {
+  background-color: var(--brand-color);
+}
+
+.container {
+  position: relative;
+  max-width: var(--max-content-width);
+  margin: 0 auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.brand {
+  padding-top: 15px;
+}
+
+.actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding-top: 15px;
+}
+
+.actions ul,
+.actions li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.actions ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.actions ul li {
+  order: 1;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  position: relative;
+}
+
+.actions .action {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin-top: 0;
+  padding: 0;
+  background-color: transparent;
+  background-clip: content-box;
+  background-origin: content-box;
+  background-image: url(../../../public/icons-sprite.png);
+  background-repeat: no-repeat;
+  background-size: 19px 1067px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.actions .action.search {
+  margin-right: 13px;
+  background-position: 1px -83px;
+}
+
+.actions .action.notification {
+  margin-right: 13px;
+  background-position: 0 -669px;
+}
+
+.actions .action.user {
+  background-position: 0 0;
+}
+
+.actions .action.avatar {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  background-image: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.actions .action.avatar:focus,
+.actions .action.avatar:active {
+  outline: none;
+}
+
+.actions .action.avatar .avatarWrapper {
+  display: inline-block;
+  position: relative;
+  width: 32px;
+  height: 32px;
+  background-color: #FFFFFF;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.actions .action.avatar .avatarWrapper .avatarImage {
+  display: block;
+  max-width: 100%;
+  max-height: none;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 50%;
+}
+
+.actions .button {
+  margin-right: 13px;
+  padding: 6px 10px;
+  background-color: transparent;
+  border: 2px solid #FFFFFF;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 0.812rem;
+  color: #FFFFFF;
+  cursor: pointer;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.actions .button:hover {
+  background-color: #FFFFFF;
+  color: #08080F;
+}
+
+.actions .button:focus,
+.actions .button:active {
+  outline: none;
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 115%;
+  right: 0;
+  min-width: 150px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #FFFFFF;
+  border-top: 5px solid #EE5C3D;
+  box-shadow: 0px 1px 3px -1px rgba(0,0,0,0.25);
+  z-index: 1;
+}
+
+.dropdownMenu::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -15px;
+  right: 0;
+  width: 100%;
+  height: 10px;
+}
+
+.dropdownMenu .dropdownButton {
+  display: block;
+  position: relative;
+  width: 100%;
+  padding: 7px 14px 8px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 0.812rem;
+  text-align: left;
+  color: #08080F;
+  -webkit-transition: background-color .3s ease-in-out;
+  -moz-transition: background-color .3s ease-in-out;
+  transition: background-color .3s ease-in-out;
+}
+
+.dropdownMenu .dropdownButton:hover {
+  background-color: color(#FFFFFF shade(5%));
+}
+
+
+/**
+ * Responsive
+ */
+
+@media screen and (max-width: 360px) {
+  .actions .button {
+    display: none;
+  }
+}

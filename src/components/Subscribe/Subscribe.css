@@ -1,0 +1,110 @@
+/**
+ * React Starter Kit (https://www.reactstarterkit.com/)
+ *
+ * Copyright © 2014-present Kriasoft, LLC. All rights reserved.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE.txt file in the root directory of this source tree.
+ */
+
+@import '../variables.css';
+
+.root {
+  background: #EEEEEE;
+}
+
+.container {
+  max-width: var(--max-content-width);
+  margin: 0 auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.subscribeWrapper {
+  position: relative;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.subscribeTitle {
+  margin: 0;
+  margin-bottom: 3px;
+  font-family: 'Lora', serif;
+  font-size: 1.375rem;
+  font-weight: bold;
+  color: #0C0C17;
+}
+
+.subscribeDesc {
+  font-family: 'Lora', serif;
+  font-size: 0.812rem;
+  font-style: italic;
+  color: #808080;
+}
+
+.subscribeDesc span[role="img"] {
+  margin-left: 5px;
+}
+
+.subscribeAlert {
+  display: block;
+  position: relative;
+  margin-top: 12px;
+  font-family: 'Lora', serif;
+  font-size: 0.812rem;
+  font-style: italic;
+  color: #808080;
+}
+
+.subscribeAlert.error {
+  color: #D50000;
+}
+
+.subscribeAlert.success {
+  color: #2FBD64;
+}
+
+.subscribeInput {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  position: relative;
+  margin-top: 20px;
+}
+
+.subscribeInput input {
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+  width: 100%;
+  margin-bottom: 5px;
+  padding: 12px 15px 13px;
+  background-color: #FFFFFF;
+  border: 2px solid #9B9B9B;
+  border-radius: 0;
+  outline: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.812rem;
+  color: #0C0C17;
+}
+
+.subscribeInput button {
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #FFFFFF;
+  border: 2px solid #0C0C17;
+  outline: none;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.875rem;
+  font-weight: bold;
+  text-align: center;
+  color: #0C0C17;
+}

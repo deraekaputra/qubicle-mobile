@@ -1,0 +1,337 @@
+/**
+ * React Starter Kit (https://www.reactstarterkit.com/)
+ *
+ * Copyright © 2014-present Kriasoft, LLC. All rights reserved.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE.txt file in the root directory of this source tree.
+ */
+
+:root {
+  --grid-column-count: 12;
+}
+
+.root {
+  position: relative;
+}
+
+.container {
+  position: relative;
+  min-width: 100%;
+  max-width: var(--max-content-width);
+  margin: 0 auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+
+/**
+* Hero
+*/
+
+.hero {
+  position: relative;
+}
+
+.heroTitle {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  position: relative;
+  margin: 89px 0 71px;
+}
+
+.heroTitle .title {
+  max-width: 500px;
+  margin: 0;
+  font-family: var(--font-family-main);
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+
+.heroTitle .title span {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 4px;
+  padding: 3px 4.5px 4px;
+  background-color: #0C0C17;
+}
+
+.heroTitle .title span span[role="img"] {
+  margin: 0;
+  padding: 0;
+}
+
+
+/**
+* Contents
+*/
+
+.contents {
+  position: relative;
+  margin-bottom: 15px;
+  padding-top: 15px;
+  padding-right: 15px;
+  padding-bottom: 0;
+  padding-left: 15px;
+}
+
+.contentsBorder {
+  position: absolute;
+  top: 16px;
+  right: 0;
+  bottom: -15px;
+  left: 0;
+  border: 15px solid #0C0C17;
+}
+
+.contactCover {
+  display: block;
+  position: relative;
+  margin-top: -56px;
+  padding-top: calc((59 / 105) * 100%);
+  overflow: hidden;
+}
+
+.contactCover::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, .84);
+  opacity: .6;
+  z-index: 1;
+}
+
+.contactCover .contactCoverText {
+  display: block;
+  position: absolute;
+  margin: -.65em 0 0;
+  opacity: .7;
+  -webkit-animation-duration: 16s;
+  animation-duration: 16s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-name: contactCoverText;
+  animation-name: contactCoverText;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  font-family: var(--font-family-main);
+  font-weight: bold;
+  font-size: 2.5rem;
+  line-height: 100%;
+  color: #FFFFFF;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.contactCover .contactCoverImage {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 100%;
+  height: auto;
+  -webkit-transform: translateY(-50%) scale(1.1);
+  -moz-transform: translateY(-50%) scale(1.1);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.contactContent {
+  position: relative;
+  margin-bottom: 8px;
+  padding: 40px 15px;
+  text-align: center;
+}
+
+.contactContent h1 {
+  margin: 0;
+  font-family: var(--font-family-base);
+  font-size: 1.625rem;
+  font-weight: bold;
+  letter-spacing: -1px;
+  color: #0C0C17;
+}
+
+.contactContent p {
+  margin: 0;
+  margin-top: 16px;
+  font-family: var(--font-family-main);
+  font-size: 1rem;
+  line-height: 26px;
+  color: rgba(0, 0, 0, .84);
+}
+
+.contentsDivider {
+  position: relative;
+  margin-top: 32px;
+}
+
+.contentsDivider svg {
+  display: block;
+  margin: 0 auto;
+}
+
+.contactForm {
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.contactForm .formGroup {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  margin-top: 16px;
+}
+
+.contactForm .formGroup:first-child {
+  margin-top: 0;
+}
+
+.contactForm .formGroup .formLabel {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 0.812rem;
+  color: #08080F;
+}
+
+.contactForm .formGroup .formInput {
+  width: 100%;
+  margin: 0;
+  padding: 9px 12px;
+  background-color: #FFFFFF;
+  border: 2px solid #9B9B9B;
+  border-radius: 0;
+  outline: none;
+  font-size: 0.812rem;
+  color: #08080F;
+}
+
+.contactForm .formGroup .formInput:focus {
+  border-color: #08080F;
+}
+
+.contactForm .formGroup .formInput.error {
+  border-color: #D50000;
+}
+
+.contactForm .formGroup .formTextArea {
+  width: 100%;
+  height: 180px;
+  margin: 0;
+  padding: 12px;
+  background-color: #FFFFFF;
+  border: 2px solid #9B9B9B;
+  border-radius: 0;
+  outline: none;
+  font-size: 0.812rem;
+  color: #08080F;
+}
+
+.contactForm .formGroup .formTextArea:focus {
+  border-color: #08080F;
+}
+
+.contactForm .formGroup .formTextArea.error {
+  border-color: #D50000;
+}
+
+.formAlert {
+  display: block;
+  width: 100%;
+  margin-top: 5px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.687rem;
+  color: #08080F;
+}
+
+.formAlert.error {
+  color: #D50000;
+}
+
+.formButton {
+  width: 100%;
+  margin-top: 32px;
+  padding: 9px 12px;
+  background-color: #FFFFFF;
+  border: 2px solid #08080F;
+  font-weight: bold;
+  font-size: 0.812rem;
+  color: #08080F;
+  cursor: pointer;
+}
+
+.formButton:focus,
+.formButton:active {
+  outline: none;
+}
+
+.formButton:disabled {
+  background: transparent;
+  opacity: .3;
+  cursor: not-allowed;
+  color: inherit;
+}
+
+.contactSent {
+  margin-top: 24px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  background-color: #97F384;
+  text-align: center;
+}
+
+.contactSent h3 {
+  margin: 0;
+  font-family: var(--font-family-system);
+  font-size: 0.812rem;
+  font-weight: bold;
+  color: #248A0F;
+}
+
+@-webkit-keyframes contactCoverText {
+  0% {
+    top: 50%;
+    left: 100%;
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  100% {
+    top: 50%;
+    left: 0;
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes contactCoverText {
+  0% {
+    top: 50%;
+    left: 100%;
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  100% {
+    top: 50%;
+    left: 0;
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}

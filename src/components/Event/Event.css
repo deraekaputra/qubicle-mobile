@@ -1,0 +1,175 @@
+/**
+ * React Starter Kit (https://www.reactstarterkit.com/)
+ *
+ * Copyright © 2014-present Kriasoft, LLC. All rights reserved.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE.txt file in the root directory of this source tree.
+ */
+
+@import '../../components/variables.css';
+
+.root {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.container {
+  position: relative;
+  min-width: 100%;
+  max-width: var(--max-content-width);
+  margin: 0 auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.eventHeader {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: flex-start;
+  position: relative;
+}
+
+.eventHeaderTitle {
+  margin: 0;
+  margin-bottom: 20px;
+  font-family: var(--font-family-system);
+  font-weight: bold;
+  font-size: 1.125rem;
+  color: #0C0C17;
+}
+
+.eventHeaderButton a {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  vertical-align: middle;
+  font-family: var(--font-family-system);
+  font-size: 0.875rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #F25A2B;
+}
+
+.eventHeaderButton a::after {
+  content: '';
+  display: inline-block;
+  position: relative;
+  width: 10px;
+  height: 10px;
+  margin-bottom: 1px;
+  margin-left: 20px;
+  background-clip: content-box;
+  background-origin: content-box;
+  background-image: url(../../../public/icons-sprite.png);
+  background-repeat: no-repeat;
+  background-position: 1px -112px;
+  background-size: 10px 561px;
+}
+
+
+/**
+ * Event Not Available
+ */
+
+.eventNotAvailable {
+  position: relative;
+  background-color: #EEEEEE;
+  background-repeat: no-repeat;
+  background-size: inherit;
+}
+
+.eventNotAvailable.Up {
+  background-image: url("./handCollage_Up.png");
+  background-position: bottom left;
+}
+
+.eventNotAvailable.Up .eventNotAvailableContents {
+  padding: 20px;
+}
+
+.eventNotAvailable.Up .eventNotAvailableContents h4 {
+  text-align: center;
+}
+
+.eventNotAvailable.Down {
+  background-image: url("./handCollage_Down.png");
+  background-position: top right;
+}
+
+.eventNotAvailable.Down .eventNotAvailableContents {
+  padding-top: 146px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+}
+
+.eventNotAvailableContents {
+  position: relative;
+}
+
+.eventNotAvailableContents h2 {
+  margin: 0;
+  margin-bottom: 32px;
+  font-family: var(--font-family-main);
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #08080F;
+}
+
+.eventNotAvailableContents h4 {
+  margin: 0;
+  margin-bottom: 20px;
+  font-family: var(--font-family-system);
+  font-size: 0.937rem;
+  font-weight: bold;
+  color: #08080F;
+}
+
+.subscribeInput {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  position: relative;
+  width: 100%;
+}
+
+.subscribeInput input {
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+  width: 100%;
+  margin-bottom: 8px;
+  padding: 12px 15px 13px;
+  background-color: #FFFFFF;
+  border: 2px solid #9B9B9B;
+  border-radius: 0;
+  outline: none;
+  font-family: var(--font-family-system);
+  font-size: 0.812rem;
+  color: #0C0C17;
+}
+
+.subscribeInput button {
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #FFFFFF;
+  border: 2px solid #0C0C17;
+  outline: none;
+  cursor: pointer;
+  font-family: var(--font-family-system);
+  font-size: 0.875rem;
+  font-weight: bold;
+  text-align: center;
+  color: #0C0C17;
+}

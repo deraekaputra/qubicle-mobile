@@ -1,0 +1,981 @@
+/**
+ * React Starter Kit (https://www.reactstarterkit.com/)
+ *
+ * Copyright © 2014-present Kriasoft, LLC. All rights reserved.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE.txt file in the root directory of this source tree.
+ */
+
+@import '../../components/variables.css';
+
+:root {
+  --grid-column-count: 12;
+}
+
+.root {
+  position: relative;
+}
+
+.container {
+  position: relative;
+  min-width: 100%;
+  max-width: var(--max-content-width);
+  margin: 0 auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: flex-start;
+  flex-direction: row;
+  position: relative;
+  margin-right: -10px;
+  margin-left: -10px;
+}
+
+.sixCol {
+  flex: none;
+  align-self: stretch;
+  position: relative;
+  width: calc((6 / var(--grid-column-count)) * 100%);
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.twelveCol {
+  flex: none;
+  align-self: stretch;
+  position: relative;
+  width: calc((12 / var(--grid-column-count)) * 100%);
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.interestLabel {
+  display: inline-block;
+  position: relative;
+  background-color: #0C0C17;
+  z-index: 1;
+}
+
+.interestLabel a {
+  display: block;
+  padding: 2px 7px 3px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  text-decoration: none;
+  letter-spacing: 1.2px;
+}
+
+.readTime {
+  display: inline-block;
+  position: relative;
+  padding: 2px 5px 3px;
+  background-color: #0C0C17;
+  font-family: 'Lora', serif;
+  font-size: 0.875rem;
+  font-weight: normal;
+  color: #FFFFFF;
+}
+
+.headline {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.headlineTop {
+  position: relative;
+}
+
+.hero {
+  position: relative;
+  padding-top: calc((153 / 125) * 100vw);
+}
+
+.heroImage {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.heroTitle {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  position: absolute;
+  bottom: 10vh;
+  left: 0;
+  margin: 0;
+}
+
+.heroTitle .interestLabel {
+  margin-bottom: 4px;
+}
+
+.heroTitle .title {
+  margin: 0;
+  margin-bottom: 4px;
+  font-family: 'Lora', serif;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.heroTitle .title a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.heroTitle .title a span {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 4px;
+  padding: 3px 4px 4px;
+  background-color: #0C0C17;
+}
+
+.heroTitle .meta {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+}
+
+.heroTitle .author {
+  padding: 2px 5px 3px;
+  background-color: #0C0C17;
+  font-size: 0.875rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.heroTitle .readTime {
+  margin-left: 8px;
+}
+
+.headlineBottom {
+  position: relative;
+  margin-top: -5vh;
+}
+
+.trending {
+  margin-bottom: 25px;
+}
+
+.section {
+  position: relative;
+  overflow: hidden;
+}
+
+.sectionHeader {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: flex-start;
+  position: relative;
+}
+
+.sectionTitle {
+  margin: 0;
+  margin-bottom: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 1.125rem;
+  color: #0C0C17;
+}
+
+.sectionTitle a {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  vertical-align: middle;
+  text-decoration: none;
+  color: #0C0C17;
+}
+
+.sectionTitle a::after {
+  content: '';
+  display: inline-block;
+  position: relative;
+  width: 10px;
+  height: 10px;
+  margin-bottom: 1px;
+  margin-left: 20px;
+  background-clip: content-box;
+  background-origin: content-box;
+  background-image: url(../../../public/icons-sprite.png);
+  background-repeat: no-repeat;
+  background-position: 1px -112px;
+  background-size: 10px 561px;
+}
+
+.sectionTitle svg {
+  margin-right: 10px;
+  vertical-align: baseline;
+}
+
+.sectionButton {
+  position: relative;
+}
+
+.sectionButton a {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  vertical-align: middle;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.875rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.sectionButton a::after {
+  content: '';
+  display: inline-block;
+  position: relative;
+  width: 10px;
+  height: 10px;
+  margin-bottom: 1px;
+  margin-left: 20px;
+  background-clip: content-box;
+  background-origin: content-box;
+  background-image: url(../../../public/icons-sprite.png);
+  background-repeat: no-repeat;
+  background-position: 1px -112px;
+  background-size: 10px 561px;
+}
+
+.sectionHorizontal {
+  margin-right: -15px;
+  margin-left: -15px;
+  padding-right: 10px;
+  padding-left: 10px;
+  overflow-y: hidden;
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+.sectionHorizontal::-webkit-scrollbar {
+  display: none;
+}
+
+.sectionHorizontal .item {
+  display: inline-block;
+  width: 85%;
+  padding-right: 5px;
+  padding-left: 5px;
+  vertical-align: top;
+  white-space: normal;
+}
+
+.card {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.cardHead {
+  position: relative;
+}
+
+.cardHead > .imageThumb {
+  display: block;
+  position: relative;
+  width: 100%;
+  padding-top: calc((9 / 16) * 100%);
+}
+
+.cardHead > .imageThumb .inner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cardHead .interestLabel {
+  position: absolute;
+  bottom: -11px;
+  left: 8px;
+}
+
+.cardHead .readTime {
+  position: absolute;
+  bottom: -11px;
+  right: 8px;
+}
+
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: stretch;
+  position: relative;
+  padding: 16px 8px 8px;
+}
+
+.cardTitle {
+  order: 0;
+  flex: 1 1 auto;
+  align-self: auto;
+}
+
+.cardTitle {
+  margin-bottom: 8px;
+}
+
+.cardTitle .title {
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: bold;
+}
+
+.cardTitle .title a {
+  text-decoration: none;
+  color: #0C0C17;
+}
+
+.cardMeta {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+  font-size: 0.875rem;
+}
+
+.cardMeta .metaAuthor {
+  color: #0C0C17;
+}
+
+.cardMeta .metaDivider {
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.cardMeta .metaDivider::after {
+  content: '\00B7';
+}
+
+.cardMeta .metaDate {
+  color: #9b9b9b;
+}
+
+.cardInline {
+  margin-bottom: 20px;
+}
+
+.cardInline .cardHead {
+  float: left;
+  width: 100px;
+  height: 100px;
+  padding-top: 0;
+}
+
+.cardInline .cardHead > .imageThumb {
+  height: 100%;
+  padding-top: 0;
+}
+
+.cardInline .readTime {
+  right: 0;
+  bottom: 0;
+}
+
+.cardInline .cardBody {
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  min-height: 100px;
+  padding: 0;
+  padding-left: 10px;
+}
+
+.cardInline .cardBody .interestLabel {
+  margin-bottom: 7px;
+}
+
+.cardInline .cardBody .cardTitle {
+  flex: 0 1 auto;
+  margin-bottom: 10px;
+}
+
+.cardSmall {
+  margin-bottom: 20px;
+}
+
+.cardSmall .cardHead > .imageThumb {
+  padding-top: calc((92 / 147) * 100%);
+}
+
+.cardSmall .cardHead .readTime {
+  right: 0;
+  bottom: 0;
+}
+
+.cardSmall .cardBody {
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  padding: 0px;
+}
+
+.cardSmall .cardBody .interestLabel {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.cardSmall .cardBody .cardMeta {
+  flex-direction: column;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+.cardSmall .cardBody .cardMeta .metaAuthor {
+  margin-bottom: 3px;
+}
+
+.hashtags {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  margin-bottom: 5px;
+}
+
+.hashtags .indicator {
+  order: 0;
+  flex: 1 0 auto;
+  align-self: auto;
+  position: relative;
+  width: 55px;
+  height: 55px;
+  margin-right: 15px;
+}
+
+.hashtags .tags {
+  order: 0;
+  flex: 1 1 auto;
+  align-self: stretch;
+}
+
+.hashtags .tags .tagsWrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+
+.hashtags .tags .tagsWrapper .tag {
+  display: flex;
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  padding: 2px 7px 3px;
+  background-color: #EAEAEA;
+  font-size: 1rem;
+  text-decoration: none;
+  color: #0C0C17;
+}
+
+.feeds .recommendationContents {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.feeds .recommendationContents .sectionTitle {
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.feedsViewMore {
+  display: block;
+  position: relative;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  overflow: hidden;
+  background-color: transparent;
+  border: 2px solid #0C0C17;
+  outline: none;
+  font-family: var(--font-family-system);
+  font-weight: bold;
+  font-size: 0.875rem;
+  text-align: center;
+  color: #0C0C17;
+  cursor: pointer;
+}
+
+.end {
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.end h3 {
+  margin: 0;
+  font-family: var(--font-family-system);
+  font-weight: bold;
+  font-size: 1rem;
+  color: #08080F;
+}
+
+
+/**
+ * Booster
+ */
+
+.boosterContents {
+  position: relative;
+  margin-top: 15px;
+  margin-bottom: 35px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+.boosterContents .boosterBackground {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+
+.boosterContents .boosterBackground::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(12, 12, 23, 0.60);
+  z-index: 1;
+}
+.boosterContents .sectionTitle,
+.boosterContents .sectionTitle a {
+  color: #FFFFFF;
+}
+
+.boosterContents .sectionTitle a::before {
+  background-color: #FFFFFF;
+}
+
+.boosterContents .sectionTitle a::after {
+  background-position: 0px -112px;
+}
+
+.boosterContents .card .cardBody .cardTitle .title a {
+  color: #FFFFFF;
+}
+
+.boosterContents .card .cardBody .cardMeta .metaAuthor,
+.boosterContents .card .cardBody .cardMeta .metaDivider,
+.boosterContents .card .cardBody .cardMeta .metaDate {
+  color: #FFFFFF;
+}
+
+.boosterContents.exclusive {
+  padding-top: 30px;
+  padding-bottom: 40px;
+  text-align: center;
+}
+
+.boosterContents.exclusive .boosterBackground::before {
+  background-color: transparent;
+}
+
+.boosterContents.exclusive .sectionTitle {
+  font-size: 1.25rem;
+}
+
+.boosterContents.exclusive .sectionBadge {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 15px;
+  padding: 3px 7px;
+  background-color: #0C0C17;
+  font-family: var(--font-family-system);
+  font-weight: bold;
+  font-size: 0.812rem;
+  color: #FFFFFF;
+  z-index: 1;
+}
+
+.boosterContents.exclusive .item .exclusiveItemOuter {
+  display: block;
+  position: relative;
+}
+
+.boosterContents.exclusive .item .exclusiveItemOuter::before {
+  content: "";
+  display: block;
+  width: 100%;
+  padding-bottom: calc((4 / 3) * 100%);
+}
+
+.boosterContents.exclusive .item .exclusiveItemInner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+/**
+ * Ads Banner
+ */
+
+ .iabThings {
+  position: relative;
+  margin-bottom: 35px;
+}
+
+.iabThingsWrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.iabThingsWrapper a {
+  order: 0;
+  flex: 0 1 auto;
+  align-self: center;
+  cursor: pointer;
+}
+
+.iabThingsWrapper a img {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+
+/**
+ * Skeleton Loading
+ */
+
+ .skeleton {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-name: placeholderSkeleton;
+  animation-name: placeholderSkeleton;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+.skeletonPrimary {
+  background-color: #CACACA;
+  background-image: -webkit-gradient(linear, left center, right center, from(#CACACA), color-stop(.2, #E7E7E7), color-stop(.4, #CACACA), to(#CACACA));
+  background-image: -webkit-linear-gradient(left, #CACACA 0%, #E7E7E7 20%, #CACACA 40%, #CACACA 100%);
+  background-repeat: no-repeat;
+  background-size: 200% 100%;
+}
+
+.skeletonSecondary {
+  background-color: #E7E7E7;
+  background-image: -webkit-gradient(linear, left center, right center, from(#E7E7E7), color-stop(.2, #CACACA), color-stop(.4, #E7E7E7), to(#E7E7E7));
+  background-image: -webkit-linear-gradient(left, #E7E7E7 0%, #CACACA 20%, #E7E7E7 40%, #E7E7E7 100%);
+  background-repeat: no-repeat;
+  background-size: 200% 100%;
+}
+
+.skeletonHeroImage {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.skeletonHeroInterestLabel {
+  position: relative;
+  width: 59px;
+  height: 23px;
+  margin-bottom: 4px;
+}
+
+.skeletonHeroTitleFirst {
+  position: relative;
+  width: 288px;
+  height: 32px;
+  margin-bottom: 4px;
+}
+
+.skeletonHeroTitleSecond {
+  position: relative;
+  width: 240px;
+  height: 32px;
+  margin-bottom: 8px;
+}
+
+.skeletonHeroAuthor {
+  position: relative;
+  width: 58px;
+  height: 23px;
+}
+
+.skeletonHeroReadTime {
+  display: inline-block;
+  position: relative;
+  width: 56px;
+  height: 23px;
+  margin-left: 8px;
+}
+
+.skeletonCardImage {
+  position: relative;
+  width: 100%;
+  padding-top: calc((9 / 16) * 100%);
+}
+
+.skeletonCardInterestLabel {
+  position: absolute;
+  bottom: -11px;
+  left: 8px;
+  width: 67px;
+  height: 23px;
+}
+
+.skeletonCardReadTime {
+  position: absolute;
+  bottom: -11px;
+  right: 8px;
+  width: 60px;
+  height: 23px;
+}
+
+.skeletonCardTitleFirst {
+  position: relative;
+  width: 100%;
+  height: 20px;
+  margin-bottom: 3px;
+}
+
+.skeletonCardTitleSecond {
+  position: relative;
+  width: 80%;
+  height: 20px;
+  margin-bottom: 8px;
+}
+
+.skeletonCardAuthor {
+  position: relative;
+  width: 62px;
+  height: 18px;
+}
+
+.skeletonCardDivider {
+  position: relative;
+  width: 3px;
+  height: 3px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.skeletonCardDate {
+  position: relative;
+  width: 75px;
+  height: 18px;
+}
+
+.skeletonCardSmallImage {
+  position: relative;
+  width: 100%;
+  padding-top: calc((92 / 147) * 100%);
+}
+
+.skeletonCardSmallReadTime {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  width: 57px;
+  height: 22px;
+}
+
+.skeletonCardSmallInterestLabel {
+  position: relative;
+  width: 67px;
+  height: 23px;
+  margin-top: 5px;
+  margin-bottom: 7px;
+}
+
+.skeletonCardSmallTitleFirst {
+  position: relative;
+  width: 100%;
+  height: 16px;
+  margin-bottom: 3px;
+}
+
+.skeletonCardSmallTitleSecond {
+  position: relative;
+  width: 80%;
+  height: 16px;
+  margin-bottom: 10px;
+}
+
+.skeletonCardSmallAuthor {
+  position: relative;
+  width: 84px;
+  height: 14px;
+  margin-bottom: 6px;
+}
+
+.skeletonCardSmallDate {
+  position: relative;
+  width: 50px;
+  height: 14px;
+}
+
+.skeletonCardInlineImage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.skeletonCardInlineReadTime {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  width: 57px;
+  height: 22px;
+}
+
+.skeletonCardInlineInterestLabel {
+  position: relative;
+  width: 67px;
+  height: 23px;
+  margin-bottom: 10px;
+}
+
+.skeletonCardInlineTitleFirst {
+  position: relative;
+  width: 100%;
+  height: 16px;
+  margin-bottom: 3px;
+}
+
+.skeletonCardInlineTitleSecond {
+  position: relative;
+  width: 80%;
+  height: 16px;
+  margin-bottom: 12px;
+}
+
+.skeletonCardInlineAuthor {
+  position: relative;
+  width: 76px;
+  height: 14px;
+}
+
+.skeletonCardInlineDate {
+  position: relative;
+  width: 69px;
+  height: 14px;
+}
+
+@-webkit-keyframes placeholderSkeleton {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
+
+@keyframes placeholderSkeleton {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
+
+
+/**
+ * Media Queries
+ */
+
+@media screen and (max-width: 384px) {
+  .cardInline .cardBody .cardTitle .title,
+  .cardSmall .cardBody .cardTitle .title {
+    font-size: 0.937rem;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .heroTitle .title {
+    font-size: 1.125rem;
+  }
+
+  .cardInline .cardBody .cardMeta {
+    flex-direction: column;
+    align-items: flex-start;
+    align-content: flex-start;
+  }
+
+  .cardInline .cardBody .cardMeta .metaDivider {
+    display: none;
+  }
+
+  .hashtags .tags .tagsWrapper .tag {
+    font-size: 0.937rem;
+  }
+}
